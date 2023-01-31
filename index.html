@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>My Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="my.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <header>
-      <h1>Welcome to My Personal Website</h1>
-      <nav>
-        <ul>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#my-projects">My Projects</a></li>
-          <li><a href="#contact-me">Contact Me</a></li>
-        </ul>
-      </nav>
+      <h1>My Name</h1>
     </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
     <main>
-      <section id="about-me">
+      <section id="about">
         <h2>About Me</h2>
-        <p>Hi, my name is Adonay Aklilu and I am a web developer. I have been working in the industry for several years and have a passion for creating beautiful and functional websites.</p>
+        <p>Insert information about yourself here.</p>
       </section>
-      <section id="my-projects">
-        <h2>My Projects</h2>
+      <section id="skills">
+        <h2>Skills</h2>
         <ul>
-          <li>Project 1: A website for a local business</li>
-          <li>Project 2: A personal blog</li>
-          <li>Project 3: An online store</li>
+          <li>Skill 1</li>
+          <li>Skill 2</li>
+          <li>Skill 3</li>
         </ul>
       </section>
-      <section id="contact-me">
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>Project 1</li>
+          <li>Project 2</li>
+          <li>Project 3</li>
+        </ul>
+      </section>
+      <section id="contact">
         <h2>Contact Me</h2>
-        <p>You can contact me by email at Adonayaklilumekonnen@gmail.com or by phone at +251-9-0800-2777.</p>
-        <p>Hi to Hilmen Assayehegn,Nahom Abera,Yared Tamiru thanks for visiting</p>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <input type="submit" value="Submit">
+        </form>
       </section>
     </main>
     <footer>
-      <p>Copyright © 2023 Adonay Aklilu</p>
+      <p>Copyright &copy; 2023 My Name</p>
     </footer>
   </body>
 </html>
