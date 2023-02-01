@@ -91,3 +91,47 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
   background-color: #555;
 }
+<style>
+.section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease;
+}
+
+.section.animated {
+  transform: translateY(-100%);
+}
+</style>
+
+<div class="section">
+  <h1>Section 1</h1>
+</div>
+
+<div class="section animated">
+  <h1>Section 2</h1>
+</div>
+
+<script>
+var sections = document.querySelectorAll(".section");
+var currentSection = 0;
+
+document.addEventListener("scroll", function() {
+  var nextSection = currentSection + 1;
+  
+  if (nextSection >= sections.length) {
+    nextSection = 0;
+  }
+  
+  var currentSectionTop = sections[currentSection].getBoundingClientRect().top;
+  
+  if (currentSectionTop < 0) {
+    sections[currentSection].classList.remove("animated");
+    sections[nextSection].classList.add("animated");
+    currentSection = nextSection;
+  }
+});
+</script>
+</style>
