@@ -1,137 +1,87 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: rgb(50,50,50);
-}
-
-header {
-  text-align: center;
-  padding: 2em 0;
-  background-color: #333;
-  color: #fff;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul {
-  list-style: none;
+*{
   margin: 0;
   padding: 0;
-  display: flex;
+  font-family: sans-serif;
 }
-
-nav a {
-  color: #fff;
-  display: block;
-  padding: 1em 2em;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background-color: #555;
-}
-
-main {
-  padding: 2em;
-}
-
-section {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #333;
-  margin: 2em 0;
-  padding: 2em;
-}
-
-section h2 {
-  text-align: center;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
-}
-
-form label,
-form input,
-form textarea {
-  display: block;
-  margin: 1em 0;
+.hero{
+  position: relative;
   width: 100%;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  background-color: #ddd;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5em;
-}
-
-form input[type="submit"] {
-  background-color: #333;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  padding: 0.5em;
-}
-
-form input[type="submit"]:hover {
-  background-color: #555;
-}
-<style>
-.section {
   height: 100vh;
-  width: 100%;
+  background: #eff4fd;
+}
+nav {
   display: flex;
-  justify-content: center;
+  width: 84%;
+  margin: auto;
+  padding: 20px 0;
   align-items: center;
-  transition: all 2s ease;
+  justify-content: space-around;
+
 }
 
-.section.animated {
-  transform: translateY(-100%);
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
 }
-</style>
+nav ul a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+nav ul a:hover{
+  color: red;
+}
+.detail{
+  margin-left: 8%;
+  margin-top: 13%;
+}
 
-<div class="section">
-  <h1>Section 1</h1>
-</div>
+.detail h1{
+  font-size: 50px;
+  color: #212121;
+  margin-bottom: 20px;
+}
 
-<div class="section animated">
-  <h1>Section 2</h1>
-</div>
+span{
+  color: orange;
+}
 
-<script>
-var sections = document.querySelectorAll(".section");
-var currentSection = 0;
+.detail p{
+  color: #555;
+  line-height: 22px;
+}
 
-document.addEventListener("scroll", function() {
-  var nextSection = currentSection + 1;
-  
-  if (nextSection >= sections.length) {
-    nextSection = 0;
-  }
-  
-  var currentSectionTop = sections[currentSection].getBoundingClientRect().top;
-  
-  if (currentSectionTop < 0) {
-    sections[currentSection].classList.remove("animated");
-    sections[nextSection].classList.add("animated");
-    currentSection = nextSection;
-  }
-});
-</script>
-</style>
+.detail a{
+  background: #212121;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  display: inline-block;
+  margin: 30px 0;
+  border-radius: 5px;
+
+}
+
+.images{
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.images img{
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+
+.images:hover .me{
+  bottom: 40px;
+
+}
